@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuário</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F4F7F9;
+      color: #333;
+      margin: 20px;
+      margin-left: 850px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      background-image: url('/Volvo_frente.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: 0.9;
+    }
+
+    form {
+      background-color: #FFF;
+      color: #333;
+      margin: 20px auto;
+      padding: 20px;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #3498DB;
+      box-shadow: 20px 7px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    label {
+      color: #000;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #3498DB;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #3498DB;
+      color: #FFF;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #2074A0;
+    }
+
+    #mensagem {
+      margin-top: 10px;
+      color: #FF0000;
+    }
+
+    #btnVoltar {
+      background-color: #ECF0F1;
+      color: red;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <button id="btnVoltar" onclick="window.location.href='login.html'">Voltar ao Login</button>
+  <h1></h1>
+  <div id="mensagem"></div>
+  <form id="cadastroForm">
+    <label for="newUsername">Novo Usuário:</label>
+    <input type="text" id="newUsername" name="newUsername" required>
+    <label for="newPassword">Nova Senha:</label>
+    <input type="password" id="newPassword" name="newPassword" required>
+    <label for="masterPassword">Senha Mestra:</label>
+    <input type="password" id="masterPassword" name="masterPassword" required>
+    <h1></h1>
+    <button type="button" onclick="validarCadastro() ? cadastrarUsuario() : null" id="cadastrarBotao">Cadastrar Usuário</button>
+  </form>
+  <h1></h1>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

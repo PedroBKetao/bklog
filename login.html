@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F4F7F9; /* Tom de azul mais suave para o fundo */
+            color: #333; /* Cor do texto principal */
+            margin: 20px;
+            margin-left: 850px;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* 100% da altura da viewport */
+        }
+
+        body::before {
+            content: "";
+            background-image: url('/Volvo_lado_porta.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.9;
+        }
+
+        form {
+            background-color: #FFF; /* Fundo branco para o formulário */
+            color: #333; /* Cor do texto no formulário */
+            margin: 20px auto;
+            padding: 20px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #3498DB; /* Cor de destaque para a borda do formulário */
+            box-shadow: 20px 7px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para o formulário */
+            border-radius: 8px; /* Borda arredondada */
+        }
+
+        label {
+            color: #000;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #3498DB;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498DB; /* Cor de destaque para os botões */
+            color: #FFF; /* Cor do texto nos botões */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease; /* Adiciona transição suave à cor de fundo */
+        }
+
+        button:hover {
+            background-color: #2074A0; /* Cor de destaque ao passar o mouse */
+        }
+
+        #mensagem {
+            margin-top: 10px;
+            color: #FF0000; /* Vermelho */
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div id="mensagem"></div>
+    <form onsubmit="fazerLogin(event); return false;">
+        <div>
+            <label for="nomeDeUsuario">Nome de Usuário:</label>
+            <input type="text" id="nomeDeUsuario" name="nomeDeUsuario" required>
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </div>
+        <div id="porta-caminhao"></div>       
+        <h1></h1>
+        <button type="submit">Login</button>
+        <h1></h1>
+        <button onclick="goToCadastro()">Criar Cadastro</button>
+        
+    </form>
+    <h1></h1>
+
+    <!-- Adicione outros elementos da sua página de login, se houver -->
+
+    <script src="scripts.js"></script>
+</body>
+</html>

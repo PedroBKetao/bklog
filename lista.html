@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <meta charset="UTF-8">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="body">
+    <p>Lista de Abastecimentos</p>
+
+    <button id="goToHomeButton" type="button" onclick="goToHome()">Ir para Página Inicial</button>
+    <button id="goToFormButton" type="button" onclick="goToForm()">Voltar para Formulário</button>
+    <button type="button" id="btnVoltar">Sair</button>
+
+    <!-- Adicionando botão de mudar tema -->
+    <button id="toggleTheme" onclick="toggleTheme()">🌙</button>
+
+    <p></p>
+    <div id="mensagens"></div>
+
+    <button id="carregarLista">Carregar Lista</button>
+    <label for="filtroCavalo">Filtrar por Cavalo:</label>
+    <input type="text" id="filtroCavalo">
+    <p></p>
+    <button id="filtrarPorCavaloButton" onclick="filtrarPorCavalo()">Filtrar</button>
+
+    <table id="abastecimentoTable">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Cavalo</th>
+                <th>Km Anterior</th>
+                <th>Km Atual</th>
+                <th>Km Rodado</th>
+                <th>Combustível</th>
+                <th>Valor Litro</th>
+                <th>Litragem</th>
+                <th>Desconto</th>
+                <th>Valor Total</th>
+                <th>Posto Combustível</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- A tabela será gerada dinamicamente aqui -->
+        </tbody>
+    </table>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarListaAbastecimentos();
+        });
+    </script>
+</body>
+
+</html>

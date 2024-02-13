@@ -1,0 +1,125 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F4F7F9; /* Tom de azul mais suave para o fundo */
+  color: #333; /* Cor do texto principal */
+  margin: 20px;
+}
+
+body.dark {
+  background-color: #274472; /* Azul escuro */
+  color: #C3E0E5; /* Bebê azul */
+  label {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff; /* Café Suíço - cor diferente para os títulos dos inputs */
+    font-weight: bold;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  color: #274472; /* Azul escuro */
+}
+
+body.dark h1 {
+  color: #C3E0E5; /* Bebê azul */
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #896d46; /* Café Suíço - cor diferente para os títulos dos inputs */
+  font-weight: bold;
+}
+button, #toggleTheme {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+input {
+  background-color: #FFF; /* Branco */
+  color: #333; /* Cor do texto principal */
+  border: 1px solid #3498DB; /* Adiciona uma borda azul para destacar o input */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none; /* Remove a borda padrão ao focar */
+  border: 2px solid #2074A0; /* Adiciona uma borda mais destacada ao focar */
+}
+
+
+button, #toggleTheme {
+  background-color: #3498DB; /* Cor de destaque para os botões */
+  color: #FFF; /* Cor do texto nos botões */
+  border-radius: 4px;
+  
+}
+
+button:hover {
+  background-color: #2074A0; /* Cor de destaque ao passar o mouse */
+}
+
+#toggleTheme {
+  background-color: #3498DB; /* Cinza azulado - tema escuro */
+  color: #FFF; /* Branco */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#abastecimentoForm, #abastecimentoTable {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFF; /* Branco */
+  color: #5885AF; /* Cinza azulado */
+  margin: 20px auto;
+  padding: 20px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #3498DB; /* Cor de destaque para a borda do formulário e tabela */
+  border-radius: 8px;
+  label {
+    display: block;
+    margin-top: 10px;
+    color: #896d46; /* Café Suíço - cor diferente para os títulos dos inputs */
+    font-weight: bold;
+  }
+
+  
+}
+
+#abastecimentoTable {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  overflow: auto;
+  
+}
+
+#abastecimentoTable th, #abastecimentoTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#abastecimentoTable th {
+  background-color: #3498DB; /* Cor de destaque para os cabeçalhos da tabela */
+  color: #FFF; /* Branco */
+  font-weight: bold;
+}
+
+#abastecimentoTable tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cinza claro */
+}
+
+#abastecimentoTable tr:hover {
+  background-color: #ddd; /* Cinza mais claro */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <p>Bem-vindo à Página Inicial, <span id="username"></span></p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const username = localStorage.getItem('usuarioLogado');
+            if (username) {
+                document.getElementById('username').innerText = `Olá, ${username}!`;
+            }
+        });
+
+        function setNomeDeUsuario(nome) {
+            document.getElementById('nomeDeUsuario').textContent = nome;
+        }
+
+        // Recupera o nome do usuário do localStorage
+        const nomeDeUsuario = localStorage.getItem('nomeDeUsuario');
+        if (nomeDeUsuario) {
+            setNomeDeUsuario(nomeDeUsuario);
+        }
+    </script>
+
+    <!-- Adicionando botões para navegar para as outras páginas -->
+    <button type="button" onclick="goToForm()">Ir para Formulário</button>
+    <button type="button" onclick="goToList()">Ir para Lista</button>
+    <button type="button" id="btnVoltar">Sair</button>
+
+    <button id="toggleTheme" onclick="toggleTheme()">🌙</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

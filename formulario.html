@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Abastecimento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+  <p>Formulário de Abastecimento</p>
+  <div id="mensagens"></div>
+
+  <button id="goToHomeButton" onclick="goToHome()">Ir para Página Inicial</button>
+  
+  <button id="goToListButton" onclick="goToList()">Ir para Lista</button>
+  <button type="button" id="btnVoltar">Sair</button>
+
+  <button id="toggleTheme" onclick="toggleTheme()">🌙</button>
+
+  <form id="abastecimentoForm">
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" pattern="\d{2}/\d{2}/\d{4}" required>
+
+    <label for="cavalo">Cavalo:</label>
+    <input type="text" id="cavalo" name="cavalo" required>
+
+    <label for="kmAnterior">Km anterior:</label>
+    <input type="number" id="kmAnterior" name="kmAnterior" required>
+
+    <label for="kmAtual">Km atual:</label>
+    <input type="number" id="kmAtual" name="kmAtual" required>
+
+    <label for="combustivel">Tipo de combustível</label>
+    <select name="combustivel" id="combustivel" required>
+      <option value=""></option>
+      <option value="Diesel S 10">Diesel S 10</option>
+      <option value="Diesel S 500">Diesel S 500</option>
+    </select>
+
+    <label for="valorLitro">Valor do Litro (R$):</label>
+    <input type="number" id="valorLitro" name="valorLitro" step="0.01" required>
+    
+
+    <label for="litragem">Litragem</label>
+    <input type="number" id="litragem" name="litragem" step="0.01" required>
+
+    <label for="desconto">Desconto (R$):</label>
+    <input type="number" id="desconto" name="desconto" step="0.01">
+
+    <label for="postodecombustivel">Posto de combustível:</label>
+    <select name="postodecombustivel" id="postodecombustivel" required>
+      <option value=""></option>
+      <option value="REDE PICA PAU">REDE PICA PAU</option>
+      <option value="REDE ESTORIL">REDE ESTORIL</option>
+      <option value="ROZINELI & ROZINELI COMERCIO DE COMBUSTIVEL">ROZINELI & ROZINELI COMERCIO DE COMBUSTIVEL</option>
+    </select>
+    <h1></h1>
+
+    <button type="submit">Adicionar Abastecimento</button>
+  </form>
+  <script src="scripts.js"></script>
+
+</body>
+</html>
