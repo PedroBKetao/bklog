@@ -4,6 +4,19 @@ body {
   color: #333; /* Cor do texto principal */
   margin: 20px;
 }
+body::before {
+  content: "";
+  background-image: url('Volvo_lado_porta.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
 
 body.dark {
   background-color: #274472; /* Azul escuro */
